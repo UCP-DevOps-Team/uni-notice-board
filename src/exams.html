@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="University Digital Notice Board for academic announcements, exams, and admissions"
+        />
+        <meta name="author" content="UCP Devops Team" />
+
+        <link rel="stylesheet" href="../styles/style.css" />
+        <title>University Digital Notice Board</title>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar">
+                <h1 class="logo">Uni Notice Board</h1>
+
+                <ul class="nav-links">
+                    <li>
+                        <a href="index.html" data-page="index">Home</a>
+                    </li>
+                    <li>
+                        <a href="notices.html" data-page="notices">Notices</a>
+                    </li>
+                    <li><a href="exams.html" data-page="exams">Exams</a></li>
+                    <li>
+                        <a href="admissions.html" data-page="admissions"
+                            >Admissions</a
+                        >
+                    </li>
+                    <li>
+                        <a href="contact.html" data-page="contact">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="container">
+            <!-- Page-specific content goes here -->
+        </main>
+
+        <script>
+            (function () {
+                const links = document.querySelectorAll(".nav-links a");
+                if (!links.length) {
+                    return;
+                }
+
+                const currentPage =
+                    window.location.pathname
+                        .split("/")
+                        .pop()
+                        .replace(".html", "") || "index";
+
+                links.forEach(function (link) {
+                    if (link.dataset.page === currentPage) {
+                        link.classList.add("active");
+                    }
+                });
+            })();
+        </script>
+    </body>
+</html>

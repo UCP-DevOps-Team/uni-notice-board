@@ -1,0 +1,7 @@
+{
+    "rules": {
+        "block-no-empty": true,
+        "color-no-invalid-hex": true,
+        "selector-type-case": "lower"
+    }
+}
