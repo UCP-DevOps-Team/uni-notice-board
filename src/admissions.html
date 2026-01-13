@@ -1,65 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta
-            name="description"
-            content="University Digital Notice Board for academic announcements, exams, and admissions"
-        />
-        <meta name="author" content="UCP Devops Team" />
 
-        <link rel="stylesheet" href="../styles/style.css" />
-        <title>University Digital Notice Board</title>
-    </head>
-    <body>
-        <header>
-            <nav class="navbar">
-                <h1 class="logo">Uni Notice Board</h1>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="University Digital Notice Board for academic announcements, exams, and admissions" />
+    <meta name="author" content="UCP Devops Team" />
 
-                <ul class="nav-links">
-                    <li>
-                        <a href="index.html" data-page="index">Home</a>
-                    </li>
-                    <li>
-                        <a href="notices.html" data-page="notices">Notices</a>
-                    </li>
-                    <li><a href="exams.html" data-page="exams">Exams</a></li>
-                    <li>
-                        <a href="admissions.html" data-page="admissions"
-                            >Admissions</a
-                        >
-                    </li>
-                    <li>
-                        <a href="contact.html" data-page="contact">Contact</a>
-                    </li>
-                </ul>
-            </nav>
-        </header>
+    <link rel="stylesheet" href="../styles/style.css" />
+    <title>University Digital Notice Board</title>
+</head>
 
-        <main class="container">
-            <!-- Page-specific content goes here -->
-        </main>
+<body>
+    <header>
+        <nav class="navbar">
+            <h1 class="logo">Uni Notice Board</h1>
 
-        <script>
-            (function () {
-                const links = document.querySelectorAll(".nav-links a");
-                if (!links.length) {
-                    return;
+            <ul class="nav-links">
+                <li>
+                    <a href="index.html" data-page="index">Home</a>
+                </li>
+                <li>
+                    <a href="notices.html" data-page="notices">Notices</a>
+                </li>
+                <li><a href="exams.html" data-page="exams">Exams</a></li>
+                <li>
+                    <a href="admissions.html" data-page="admissions">Admissions</a>
+                </li>
+                <li>
+                    <a href="contact.html" data-page="contact">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="admission-header">
+            <h2>Fall 2025 Admissions Open</h2>
+            <p>Join the next generation of innovators at our university. Explore our programs and start your journey
+                today.</p>
+        </section>
+
+        <section class="admission-programs">
+            <h3>Available Programs</h3>
+            <div class="program-grid">
+                <div class="program-card">
+                    <h4>BS Software Engineering</h4>
+                    <p>Status: <span class="badge open">Open</span></p>
+                </div>
+                <div class="program-card">
+                    <h4>BS Computer Science</h4>
+                    <p>Status: <span class="badge open">Open</span></p>
+                </div>
+                <div class="program-card">
+                    <h4>MS Cyber Security</h4>
+                    <p>Status: <span class="badge limited">Limited Seats</span></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="eligibility">
+            <h3>Eligibility Criteria</h3>
+            <ul>
+                <li><strong>Undergraduate:</strong> Minimum 60% in Intermediate/A-Levels with Mathematics.</li>
+                <li><strong>Graduate:</strong> 16 years of education in a relevant field with a minimum 2.5 CGPA.</li>
+            </ul>
+        </section>
+
+        <section class="scholarships">
+            <h3>Scholarships & Financial Aid</h3>
+            <p>We believe in talent. We offer various scholarships including:</p>
+            <ul>
+                <li>Merit-based Scholarships (Up to 100% Tuition Waiver)</li>
+                <li>Need-based Financial Support</li>
+                <li>Kinship Policy Discounts</li>
+            </ul>
+        </section>
+
+        <section class="campus-visit">
+            <h3>Campus Tours</h3>
+            <p>Want to see the campus? Join our guided tours every Wednesday and Friday at 10:00 AM.</p>
+            <button class="btn-primary">Book a Tour</button>
+        </section>
+
+        <section class="dates">
+            <h3>Important Dates</h3>
+            <div class="date-item">
+                <span>Last Date to Apply:</span>
+                <strong>30th August 2025</strong>
+            </div>
+            <div class="date-item">
+                <span>Entry Test:</span>
+                <strong>5th September 2025</strong>
+            </div>
+        </section>
+
+        <section class="admission-contact">
+            <h3>Admissions Office</h3>
+            <p>Email: admissions@university.edu.pk</p>
+            <p>Phone: +92 (42) 111-000-000</p>
+            <p>Address: Main Campus, Knowledge Valley.</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 University Digital Notice Board</p>
+        </div>
+    </footer>
+
+    <script>
+        (function () {
+            const links = document.querySelectorAll(".nav-links a");
+            if (!links.length) {
+                return;
+            }
+
+            const currentPage =
+                window.location.pathname
+                    .split("/")
+                    .pop()
+                    .replace(".html", "") || "index";
+
+            links.forEach(function (link) {
+                if (link.dataset.page === currentPage) {
+                    link.classList.add("active");
                 }
+            });
+        })();
+    </script>
+</body>
 
-                const currentPage =
-                    window.location.pathname
-                        .split("/")
-                        .pop()
-                        .replace(".html", "") || "index";
-
-                links.forEach(function (link) {
-                    if (link.dataset.page === currentPage) {
-                        link.classList.add("active");
-                    }
-                });
-            })();
-        </script>
-    </body>
 </html>
