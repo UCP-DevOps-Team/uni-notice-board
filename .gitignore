@@ -3,4 +3,4 @@
 .env
 .vscode/
 build/
-**/.prcel-cache
+**/.parcel-cache
