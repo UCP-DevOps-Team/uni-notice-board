@@ -5,48 +5,108 @@
     align-items: center;
     padding: 1rem 2rem;
     background-color: #1e293b;
-}
-
-.logo {
+  }
+  
+  .logo {
     color: #ffffff;
     font-size: 1.4rem;
     margin: 0;
-}
-
-/* Navigation links */
-.nav-links {
+  }
+  
+  /* Navigation links */
+  .nav-links {
     list-style: none;
     display: flex;
     gap: 1.5rem;
     padding: 0;
     margin: 0;
-}
-
-.nav-links a {
+  }
+  
+  .nav-links a {
     color: #cbd5f5;
     text-decoration: none;
     font-weight: 500;
     padding-bottom: 0.25rem;
     border-bottom: 2px solid transparent;
     transition: color 0.2s ease, border-bottom 0.2s ease;
-}
-
-.nav-links a:hover {
+  }
+  
+  .nav-links a:hover {
     color: #ffffff;
-}
-
-/* Active page link */
-.nav-links a.active {
-    color: #ffffff;
-    border-bottom: 2px solid #38bdf8;
-}
-
-#active {
+  }
+  
+  /* Active page link */
+  .nav-links a.active {
     color: #ffffff;
     border-bottom: 2px solid #38bdf8;
-}
-
-#container {
+  }
+  
+  #container {
     min-height: 80vh;
     padding: 2rem;
+  }
+  
+ /* ========================= */
+/* exams page specific css   */
+/* ========================= */
+
+.exams-page {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.exams-title {
+  color: #1e293b;
+  margin-bottom: 1.5rem;
+  font-size: 1.75rem;
+  border-left: 4px solid #38bdf8;
+  padding-left: 1rem;
+}
+
+#exam-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background-color: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+}
+
+#exam-table th {
+  background-color: #1e293b;
+  color: #f8fafc;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  padding: 1rem 1.5rem;
+  text-align: left;
+}
+
+#exam-table td {
+  padding: 1rem 1.5rem;
+  color: #475569;
+  border-bottom: 1px solid #f1f5f9;
+  font-size: 0.95rem;
+}
+
+#exam-table tbody tr:nth-child(even) {
+  background-color: #f8fafc;
+}
+
+#exam-table tbody tr:hover {
+  background-color: #f1f5f9;
+  transition: background-color 0.2s ease;
+}
+
+#exam-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+#exam-table td:first-child {
+  font-weight: 600;
+  color: #1e293b;
 }
