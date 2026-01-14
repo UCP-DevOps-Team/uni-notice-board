@@ -45,31 +45,17 @@
     min-height: 80vh;
     padding: 2rem;
   }
-  
-<<<<<<< HEAD
- /* ========================= */
+/* ========================= */
 /* exams page specific css   */
 /* ========================= */
 
 .exams-page {
-=======
-  /* ========================= */
-  /* exams page specific css */
-  /* ========================= */
-
-.container {
->>>>>>> c9a28fb2485c55f40ac962f9aede30aaaba00b56
   max-width: 1000px;
   margin: 0 auto;
   padding: 2rem;
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
 }
-
-<<<<<<< HEAD
 .exams-title {
-=======
-h2 {
->>>>>>> c9a28fb2485c55f40ac962f9aede30aaaba00b56
   color: #1e293b;
   margin-bottom: 1.5rem;
   font-size: 1.75rem;
@@ -79,19 +65,12 @@ h2 {
 
 #exam-table {
   width: 100%;
-<<<<<<< HEAD
   border-collapse: separate;
-=======
-  border-collapse: separate; /* Changed to separate for rounded corners */
->>>>>>> c9a28fb2485c55f40ac962f9aede30aaaba00b56
   border-spacing: 0;
   background-color: #ffffff;
   border-radius: 8px;
   overflow: hidden;
-<<<<<<< HEAD
-=======
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
->>>>>>> c9a28fb2485c55f40ac962f9aede30aaaba00b56
   border: 1px solid #e2e8f0;
 }
 
@@ -113,41 +92,20 @@ h2 {
   font-size: 0.95rem;
 }
 
-<<<<<<< HEAD
-=======
-/* Zebra Striping */
->>>>>>> c9a28fb2485c55f40ac962f9aede30aaaba00b56
 #exam-table tbody tr:nth-child(even) {
   background-color: #f8fafc;
 }
 
-<<<<<<< HEAD
-=======
-/* Hover Effect */
->>>>>>> c9a28fb2485c55f40ac962f9aede30aaaba00b56
 #exam-table tbody tr:hover {
   background-color: #f1f5f9;
   transition: background-color 0.2s ease;
 }
 
-<<<<<<< HEAD
-=======
-/* Remove bottom border from last row to respect border-radius */
->>>>>>> c9a28fb2485c55f40ac962f9aede30aaaba00b56
 #exam-table tbody tr:last-child td {
   border-bottom: none;
 }
 
-<<<<<<< HEAD
 #exam-table td:first-child {
   font-weight: 600;
   color: #1e293b;
 }
-=======
-/* Bold the Course Name for better recognition */
-#exam-table td:first-child {
-  font-weight: 600;
-  color: #1e293b;
-}
-  
->>>>>>> c9a28fb2485c55f40ac962f9aede30aaaba00b56
