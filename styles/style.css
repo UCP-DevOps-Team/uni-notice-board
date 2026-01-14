@@ -50,3 +50,56 @@
     min-height: 80vh;
     padding: 2rem;
 }
+
+/* ================================
+   Contact Page – Scoped Styles
+   ================================ */
+
+.contact-section {
+  margin-top: 20px;
+}
+
+.contact-section .page-header {
+  margin-bottom: 25px;
+}
+
+.contact-section .page-title {
+  font-size: 24px;
+  margin-bottom: 6px;
+  color: #004d40;
+}
+
+.contact-section .page-subtitle {
+  font-size: 14px;
+  color: #555555;
+}
+
+.contact-section .contact-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.contact-section .contact-card {
+  background-color: #ffffff;
+  padding: 18px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.contact-section .contact-card h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #222222;
+}
+
+.contact-section .contact-card p {
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: #444444;
+}
+
+.contact-section .contact-meta span {
+  font-weight: bold;
+  color: #00695c;
+}
