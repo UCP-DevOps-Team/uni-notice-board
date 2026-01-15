@@ -1,65 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta
-            name="description"
-            content="University Digital Notice Board for academic announcements, exams, and admissions"
-        />
-        <meta name="author" content="UCP Devops Team" />
 
-        <link rel="stylesheet" href="../styles/style.css" />
-        <title>University Digital Notice Board</title>
-    </head>
-    <body>
-        <header>
-            <nav class="navbar">
-                <h1 class="logo">Uni Notice Board</h1>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="University Digital Notice Board for academic announcements, exams, and admissions" />
+    <meta name="author" content="UCP Devops Team" />
 
-                <ul class="nav-links">
-                    <li>
-                        <a href="index.html" data-page="index">Home</a>
-                    </li>
-                    <li>
-                        <a href="notices.html" data-page="notices">Notices</a>
-                    </li>
-                    <li><a href="exams.html" data-page="exams">Exams</a></li>
-                    <li>
-                        <a href="admissions.html" data-page="admissions"
-                            >Admissions</a
-                        >
-                    </li>
-                    <li>
-                        <a href="contact.html" data-page="contact">Contact</a>
-                    </li>
-                </ul>
-            </nav>
-        </header>
+    <link rel="stylesheet" href="../styles/style.css" />
+    <title>University Digital Notice Board</title>
+</head>
 
-        <main class="container">
-            <!-- Page-specific content goes here -->
-        </main>
+<body>
+    <header>
+        <nav class="navbar">
+            <h1 class="logo">Uni Notice Board</h1>
 
-        <script>
-            (function () {
-                const links = document.querySelectorAll(".nav-links a");
-                if (!links.length) {
-                    return;
+            <ul class="nav-links">
+                <li>
+                    <a href="index.html" data-page="index">Home</a>
+                </li>
+                <li>
+                    <a href="notices.html" data-page="notices">Notices</a>
+                </li>
+                <li><a href="exams.html" data-page="exams">Exams</a></li>
+                <li>
+                    <a href="admissions.html" data-page="admissions">Admissions</a>
+                </li>
+                <li>
+                    <a href="contact.html" data-page="contact">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="exams-page">
+        <h2 class="exams-title">Examination Schedule</h2>
+
+        <table id="exam-table">
+            <thead>
+                <tr>
+                    <th>Course</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Venue</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Software Engineering</td>
+                    <td>10 Oct 2025</td>
+                    <td>09:00 - 12:00</td>
+                    <td>Hall A</td>
+                </tr>
+                <tr>
+                    <td>Database Systems</td>
+                    <td>12 Oct 2025</td>
+                    <td>09:00 - 12:00</td>
+                    <td>Hall B</td>
+                </tr>
+                <tr>
+                    <td>Operating Systems</td>
+                    <td>14 Oct 2025</td>
+                    <td>02:00 - 05:00</td>
+                    <td>Hall C</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <script>
+        (function () {
+            const links = document.querySelectorAll(".nav-links a");
+            if (!links.length) {
+                return;
+            }
+
+            const currentPage =
+                window.location.pathname
+                    .split("/")
+                    .pop()
+                    .replace(".html", "") || "index";
+
+            links.forEach(function (link) {
+                if (link.dataset.page === currentPage) {
+                    link.classList.add("active");
                 }
+            });
+        })();
+    </script>
+</body>
 
-                const currentPage =
-                    window.location.pathname
-                        .split("/")
-                        .pop()
-                        .replace(".html", "") || "index";
-
-                links.forEach(function (link) {
-                    if (link.dataset.page === currentPage) {
-                        link.classList.add("active");
-                    }
-                });
-            })();
-        </script>
-    </body>
 </html>
