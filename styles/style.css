@@ -321,3 +321,133 @@
         grid-template-columns: 1fr;
     }
 }
+
+/* =====================================
+   Events Page – Scoped Styles
+   ===================================== */
+
+.events-page {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.events-page .events-header {
+    margin-bottom: 30px;
+}
+
+.events-page .events-main-title {
+    color: #1e293b;
+    font-size: 2rem;
+    margin-bottom: 8px;
+}
+
+.events-page .events-description {
+    color: #64748b;
+}
+
+.events-page .events-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.events-page .event-strip {
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    border: 1px solid #e2e8f0;
+    transition: box-shadow 0.3s ease;
+}
+
+.events-page .event-strip:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Highlight the Gala event */
+.events-page .event-strip.highlight {
+    border-left: 5px solid #38bdf8;
+}
+
+.events-page .event-date-box {
+    background: #1e293b;
+    color: white;
+    min-width: 70px;
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    margin-right: 25px;
+}
+
+.events-page .event-day {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.events-page .event-month {
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.events-page .event-details {
+    flex-grow: 1;
+}
+
+.events-page .event-category {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #38bdf8;
+    letter-spacing: 1px;
+}
+
+.events-page .event-name {
+    margin: 5px 0;
+    color: #1e293b;
+    font-size: 1.2rem;
+}
+
+.events-page .event-info {
+    font-size: 0.9rem;
+    color: #64748b;
+    margin: 0;
+}
+
+.events-page .btn-register {
+    background-color: #38bdf8;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.events-page .btn-register:hover {
+    background-color: #0ea5e9;
+}
+
+/* Responsive adjustment */
+@media (max-width: 600px) {
+    .events-page .event-strip {
+        flex-direction: column;
+        text-align: center;
+    }
+    .events-page .event-date-box {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    .events-page .event-actions {
+        margin-top: 15px;
+        width: 100%;
+    }
+    .events-page .btn-register {
+        width: 100%;
+    }
+}

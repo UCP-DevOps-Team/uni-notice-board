@@ -10,6 +10,7 @@
         <meta name="author" content="UCP Devops Team" />
 
         <link rel="stylesheet" href="../styles/style.css" />
+        <link rel="stylesheet" href="../styles/notices.css" />
         <title>University Digital Notice Board</title>
     </head>
     <body>
@@ -24,6 +25,9 @@
                     <li>
                         <a href="notices.html" data-page="notices">Notices</a>
                     </li>
+                    <li>
+                        <a href="events.html" data-page="events">Events</a>
+                    </li>
                     <li><a href="exams.html" data-page="exams">Exams</a></li>
                     <li>
                         <a href="admissions.html" data-page="admissions"
@@ -37,9 +41,39 @@
             </nav>
         </header>
 
-        <main class="container">
-            <!-- Page-specific content goes here -->
+        <main class="container notices-page">
+            <h2 class="notices-title">Latest Notices</h2>
+
+            <div class="notices-list">
+                <div class="notice-card">
+                    <h3>Mid-Term Examination Schedule</h3>
+                    <p class="notice-meta">Posted on: 12 March 2026</p>
+                    <p class="notice-text">
+                        Mid-term exams will commence from 18th March. Students are advised
+                        to check the exams section for detailed schedules.
+                    </p>
+                </div>
+
+                <div class="notice-card">
+                    <h3>Admission Open – Fall 2026</h3>
+                    <p class="notice-meta">Posted on: 5 March 2026</p>
+                    <p class="notice-text">
+                        Admissions for Fall 2026 are now open. Interested candidates
+                        should apply before the deadline.
+                    </p>
+                </div>
+
+                <div class="notice-card">
+                    <h3>Library Timing Update</h3>
+                    <p class="notice-meta">Posted on: 28 February 2026</p>
+                    <p class="notice-text">
+                        The university library will remain open until 9:00 PM from
+                        Monday to Friday starting next week.
+                    </p>
+                </div>
+            </div>
         </main>
+
 
         <script>
             (function () {
