@@ -58,10 +58,28 @@ jobs:
                   name: dist
                   path: dist
 
-    docker:
-        name: Docker Build & Push
+    docker-validate:
+        name: Docker Build Validation (PR only)
         needs: build
         runs-on: ubuntu-latest
+        if: github.event_name == 'pull_request'
+
+        steps:
+            - uses: actions/checkout@v4
+
+            - uses: actions/download-artifact@v4
+              with:
+                  name: dist
+                  path: dist
+
+            - name: Docker build (no push)
+              run: docker build -t pr-validation .
+
+    docker:
+        name: Docker Build & push
+        needs: build
+        runs-on: ubuntu-latest
+        if: github.event_name == 'push'
 
         steps:
             - name: Checkout code
@@ -83,6 +101,5 @@ jobs:
               uses: docker/build-push-action@v5
               with:
                   context: .
-                  file: Dockerfile
                   push: true
                   tags: ${{ secrets.DOCKERHUB_USERNAME }}/uni-notice-board:latest

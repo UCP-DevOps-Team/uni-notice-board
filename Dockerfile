@@ -1,11 +1,7 @@
-FROM node:alpine AS app-build-stage
-WORKDIR /app
-COPY package*.json ./
-RUN npm install
-COPY . .
-RUN npx htmlhint "src/**/*.html"
-RUN npx stylelint "styles/**/*.css"
-RUN npx parcel build "./src/index.html" --dist-dir "./dist" --public-url "./" --no-cache
+FROM nginx:alpine
 
-FROM nginx:alpine AS deploy-stage
-COPY --from=app-build-stage /app/dist /usr/share/nginx/html
+# Remove default nginx static files
+RUN rm -rf /usr/share/nginx/html/*
+
+# Copy CI-built assets only
+COPY dist /usr/share/nginx/html
