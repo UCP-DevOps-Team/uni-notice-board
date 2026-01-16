@@ -1,19 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 :root {
-    --primary-gradient: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
-    --bg-dark: #0f172a;
-    --card-bg: rgba(30, 41, 59, 0.7);
-    --text-main: #f8fafc;
-    --text-muted: #94a3b8;
-    --accent: #38bdf8;
-    --success: #10b981;
-    --warning: #f59e0b;
+    --primary-gradient: linear-gradient(135deg, #f0f9ff 0%, #e0e7ff 100%);
+    --accent-gradient: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+    --bg-light: #fdfdfd;
+    --card-bg: #ffffff;
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+    --accent: #4f46e5;
+    --success: #059669;
+    --warning: #d97706;
 }
 
 body {
     font-family: 'Inter', sans-serif;
-    background-color: var(--bg-dark);
+    background-color: var(--bg-light);
     color: var(--text-main);
     line-height: 1.6;
     margin: 0;
@@ -30,10 +31,11 @@ body {
 .admission-header {
     text-align: center;
     margin-bottom: 5rem;
-    padding: 4rem 2rem;
+    padding: 5rem 2rem;
     background: var(--primary-gradient);
-    border-radius: 24px;
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(99, 102, 241, 0.1);
+    border-radius: 32px;
+    box-shadow: 0 4px 20px -5px rgba(0, 0, 0, 0.05);
     animation: fadeIn 1s ease-out;
 }
 
@@ -42,12 +44,15 @@ body {
     font-weight: 800;
     margin-bottom: 1.5rem;
     letter-spacing: -0.025em;
-    color: white;
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .admission-header p {
     font-size: 1.25rem;
-    color: rgba(255, 255, 255, 0.9);
+    color: var(--text-muted);
     max-width: 700px;
     margin: 0 auto;
 }
@@ -62,7 +67,7 @@ h3 {
     font-size: 2rem;
     font-weight: 700;
     margin-bottom: 2.5rem;
-    color: var(--accent);
+    color: var(--text-main);
     position: relative;
     display: inline-block;
 }
@@ -74,7 +79,7 @@ h3::after {
     left: 0;
     width: 60px;
     height: 4px;
-    background: var(--primary-gradient);
+    background: var(--accent-gradient);
     border-radius: 2px;
 }
 
@@ -87,17 +92,17 @@ h3::after {
 
 .program-card {
     background: var(--card-bg);
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid #e2e8f0;
     padding: 2.5rem;
-    border-radius: 20px;
+    border-radius: 24px;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
 }
 
 .program-card:hover {
     transform: translateY(-8px);
     border-color: var(--accent);
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 20px 25px -5px rgba(99, 102, 241, 0.1);
 }
 
 .program-card h4 {
@@ -115,37 +120,43 @@ h3::after {
 }
 
 .badge.open {
-    background: rgba(16, 185, 129, 0.2);
+    background: #ecfdf5;
     color: var(--success);
 }
 
 .badge.limited {
-    background: rgba(245, 158, 11, 0.2);
+    background: #fffbeb;
     color: var(--warning);
 }
 
 /* Eligibility & Scholarships Lists */
-.eligibility ul, .scholarships ul {
+.eligibility ul,
+.scholarships ul {
     list-style: none;
     padding: 0;
 }
 
-.eligibility li, .scholarships li {
-    background: var(--card-bg);
+.eligibility li,
+.scholarships li {
+    background: #f8fafc;
     margin-bottom: 1rem;
     padding: 1.5rem;
-    border-radius: 12px;
+    border-radius: 16px;
     border-left: 4px solid var(--accent);
     transition: transform 0.2s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
-.eligibility li:hover, .scholarships li:hover {
+.eligibility li:hover,
+.scholarships li:hover {
     transform: translateX(10px);
+    background: #ffffff;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
 /* Buttons */
 .btn-primary {
-    background: var(--primary-gradient);
+    background: var(--accent-gradient);
     color: white;
     padding: 1rem 2.5rem;
     border-radius: 12px;
@@ -164,10 +175,10 @@ h3::after {
 
 /* Important Dates */
 .dates {
-    background: var(--card-bg);
+    background: #f1f5f9;
     padding: 3rem;
     border-radius: 24px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid #e2e8f0;
 }
 
 .date-item {
@@ -175,7 +186,7 @@ h3::after {
     justify-content: space-between;
     align-items: center;
     padding: 1.5rem 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid #cbd5e1;
 }
 
 .date-item:last-child {
@@ -193,32 +204,46 @@ h3::after {
 
 /* Contact Section */
 .admission-contact {
-    background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('https://images.unsplash.com/photo-1541339907198-e08756ebafe3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('https://images.unsplash.com/photo-1541339907198-e08756ebafe3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
     background-size: cover;
     background-position: center;
     padding: 5rem 3rem;
-    border-radius: 24px;
+    border-radius: 32px;
     text-align: center;
+    border: 1px solid #e2e8f0;
 }
 
 .admission-contact h3 {
-    color: white;
+    color: var(--text-main);
 }
 
 .admission-contact p {
     font-size: 1.1rem;
     margin-bottom: 0.5rem;
+    color: var(--text-muted);
 }
 
 /* Animations */
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 @keyframes slideUp {
-    from { opacity: 0; transform: translateY(30px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Responsive adjustments */
@@ -226,9 +251,11 @@ h3::after {
     .admission-header h2 {
         font-size: 2.5rem;
     }
+
     .container {
         padding: 2rem 1rem;
     }
+
     .date-item {
         flex-direction: column;
         align-items: flex-start;
