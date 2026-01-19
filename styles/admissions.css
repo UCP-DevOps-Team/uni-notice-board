@@ -173,6 +173,51 @@ h3::after {
     box-shadow: 0 20px 25px -5px rgba(99, 102, 241, 0.4);
 }
 
+/* Steps to Apply Section */
+.steps-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.step-card {
+    display: flex;
+    align-items: center;
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 20px;
+    border: 1px solid #e2e8f0;
+    transition: all 0.3s ease;
+    gap: 2rem;
+}
+
+.step-card:hover {
+    border-color: var(--accent);
+    box-shadow: 0 10px 25px -5px rgba(99, 102, 241, 0.1);
+    transform: translateX(10px);
+}
+
+.step-number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    min-width: 60px;
+}
+
+.step-card h4 {
+    font-size: 1.25rem;
+    margin-bottom: 0.25rem;
+    color: var(--text-main);
+}
+
+.step-card p {
+    color: var(--text-muted);
+    margin: 0;
+}
+
 /* Important Dates */
 .dates {
     background: #f1f5f9;
